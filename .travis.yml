@@ -4,7 +4,7 @@ node_js:
 
 install:
   - npm install -g typescript typings
-  - typings install dt~node --global
+  - typings install dt~node dt~mocha --global
   - npm install
 
 before_script:
