@@ -1,0 +1,118 @@
+doctype html
+html
+    head
+        //- Meta Tags
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        //- CSS Document
+        <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+        link(rel="stylesheet", href="/css/main.css", type="text/css")
+        <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+
+        title Vinicius Guedes
+    
+    body
+
+        //- Sidebar
+        section#sidebar
+            .inner
+                nav
+                    ul
+                        li
+                            a(href="#intro") Bem vindo
+                        li
+                            a(href="#experiencias") O que já fiz
+                        li
+                            a(href="#contacts") Entre em contato
+
+        //- Wrapper
+        #wrapper
+            //- Intro
+            section#intro.wrapper.style1.fullscreen.fade-up
+                .inner
+                    h1 Vinicius Guedes - Portifólio
+                    p Bem vindo ao meu Portifólio
+
+                    ul.actions
+                        li
+                            a(href="#experiencias").button.scrolly Saiba mais
+
+            //- O que já fiz
+            section#experiencias.wrapper.style3.fade-up
+                .inner
+                    h2 O que já fiz
+
+                    .features
+                        each exp in experiencias
+                            section
+                                span.icon.major(style="background-image: url(" + exp.logo + "); background-size: 100% 100%; background-position: center center;")
+                                h3= exp.company
+                                h5= exp.job
+                                p= exp.description
+                                hr
+                                span
+                                    | #{exp.date.start}
+                                    if exp.date.end !== null
+                                        |  à #{exp.date.end}
+                                    else
+                                        |  - Atualmente
+
+            //- Section Three
+            section#contacts.wrapper.style1.fade-up
+                div.inner
+                    h2 Entre em contato
+                    p Se você gostou do meu trabalho e quer apostar na solução certa para o seu projeto entre em contato comigo.
+                    
+                    .split.style1
+                        section
+                            form(method="post", action="#")
+                                .field.half.first
+                                    label(for="name") Nome
+                                    input#name(type="text", name="name")
+                                
+                                .field.half
+                                    label(for="email") E-mail
+                                    input#email(type="text", name="email")
+                                
+                                .field
+                                    label(for="message") Mensagem
+                                    textarea#message(name="message", rows="5")
+                                
+                                ul.actions
+                                    li 
+                                        a(href="").button.submit Enviar Mensagem
+
+                        section
+                            ul.contact
+                                li
+                                    h3 E-mail
+                                    a(href="mailto:viniciusgued@gmail.com") viniciusgued@gmail.com
+                                li
+                                    h3 Celular
+                                    span +55 (11) 96369-7352
+                                li
+                                    h3 Redes sociais
+                                    ul.icons
+                                        li
+                                            a(href="https://github.com/vinyguedess", target="_blank").fa-github  
+                                        li
+                                            a(href="https://facebook.com/VinyGuedess", target="_blank").fa-facebook
+                                        li
+                                            a(href="https://twitter.com/Viny_Guedes", target="_blank").fa-twitter
+                    
+        //- Footer
+        footer#footer.wrapper.style1-alt
+            .inner
+                ul.menu
+                    li &copy; VinyGuedess. All rights reserved.
+
+        //- Scripts
+        script(src="/js/jquery.min.js")
+        script(src="/js/jquery.scrollex.min.js")
+        script(src="/js/jquery.scrolly.min.js")
+        script(src="/js/skel.min.js")
+        script(src="/js/util.js")
+        <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+        script(src="/js/main.js")

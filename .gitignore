@@ -1,0 +1,8 @@
+# App files and folders
+/build/
+/node_modules/
+/src/
+/typings/
+process.js
+
+# OS and IDE files and folders

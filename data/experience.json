@@ -1,0 +1,75 @@
+{
+    "name": "experience",
+    "data": [
+        {
+            "logo": "https://www.parpe.com.br/template/images/parpe_logo_google.jpg",
+            "company": "Parpe",
+            "job": "Programador Full Stack",
+            "date": {
+                "start": "2017/05",
+                "end": null
+            },
+            "description": ""
+        },
+        {
+            "logo": "http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAZsAAAAJGJiNDQ0MTNlLTc4YjUtNDA1OC05ZDg3LTgyOGE4MjUzNWY5Zg.png",
+            "company": "Grupo Ideal Trends",
+            "job": "Coordenador de desenvolvimento de software",
+            "date": {
+                "start": "2016/01",
+                "end": "2017/05"
+            },
+            "description": ""
+        },
+        {
+            "logo": "/img/sem-imagem.jpg",
+            "company": "DS Tecnologia",
+            "job": "Desenvolvedor Pleno",
+            "date": {
+                "start": "2015/04",
+                "end": "2016/01"
+            },
+            "description": ""
+        },
+        {
+            "logo": "https://is1-ssl.mzstatic.com/image/thumb/Purple1/v4/db/cd/33/dbcd33f4-c044-25cd-adff-efdf28b85092/source/256x256bb.jpg",
+            "company": "DocSystem Corporation",
+            "job": "Programador Pleno",
+            "date":{
+                "start": "2014/01",
+                "end": "2015/03"
+            },
+            "description": ""
+        },
+        {
+            "logo": "https://is1-ssl.mzstatic.com/image/thumb/Purple1/v4/db/cd/33/dbcd33f4-c044-25cd-adff-efdf28b85092/source/256x256bb.jpg",
+            "company": "DocSystem Corporation",
+            "job": "Programador Jr.",
+            "date":{
+                "start": "2012/10",
+                "end": "2013/12"
+            },
+            "description": ""
+        },
+        {
+            "logo": "https://f5.com/Portals/1/Users/084/84/140884/partner-logo-at-kearney.png",
+            "company": "A.T. Kearney",
+            "job": "Analista de Suporte Técnico",
+            "date":{
+                "start": "2011/10",
+                "end": "2012/09"
+            },
+            "description": ""
+        },
+        {
+            "logo": "https://seeklogo.com/images/D/d-link-logo-A399D83DED-seeklogo.com.gif",
+            "company": "D-Link Brasil",
+            "job": "Analistas de Suporte Técnico",
+            "date":{
+                "start": "2010/08",
+                "end": "2011/07"
+            },
+            "description": ""
+        }
+    ]
+}

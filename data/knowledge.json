@@ -1,0 +1,8 @@
+{
+    "name": "knowledge",
+    "data": [
+        { "name": "PHP", "grade": 5 },
+        { "name": "NodeJS", "grade": 5 },
+        { "name": "Python", "grade": 3.8 }
+    ]
+}
