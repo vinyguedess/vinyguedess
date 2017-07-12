@@ -3,16 +3,22 @@
   "description": "VinyGuedess site processor for github.io",
   "version": "0.1.0",
   "main": "server.js",
+
   "dependencies": {
     "express": "^4.15.3",
     "ncp": "^2.0.0",
     "pug": "^2.0.0-rc.2",
     "request": "^2.81.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  },
+
   "scripts": {
     "start": "node server.js",
     "build": "tsc",
-    "process": "node process.js"
+    "process": "node process.js",
+    "test": "./node_modules/mocha/bin/_mocha test"
   }
 }

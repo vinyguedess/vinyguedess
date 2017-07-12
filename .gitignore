@@ -2,6 +2,7 @@
 /build/
 /node_modules/
 /src/
+/test/**/*.js
 /typings/
 process.js
 

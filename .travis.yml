@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "6"
+
+install:
+  - npm install -g typescript typings
+  - typings install dt~node --global
+  - npm install
+
+before_script:
+  - npm run build
+
+after_success:
+  - npm run process
+  - cd build
+  - ls
