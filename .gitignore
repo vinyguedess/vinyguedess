@@ -1,7 +1,7 @@
 # App files and folders
 /node_modules/
 /out/*
-!/out/googlec3bc11bfcf5832da.html
+!/out/google2be704f612ed832d.html
 !/out/sitemap.xml
 /src/
 /test/**/*.js
