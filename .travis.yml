@@ -2,6 +2,11 @@ language: node_js
 node_js:
   - "6"
 
+env:
+  global:
+  - ENCRYPTION_LABEL: "<.... encryption label from previous step ....>"
+  - COMMIT_AUTHOR_EMAIL: "viniciusgued@gmail.com"
+
 install:
   - npm install -g typescript typings
   - typings install dt~node dt~mocha --global
@@ -13,7 +18,4 @@ before_script:
 after_success:
   - npm run process
   - cd build
-  - git init
-  - git remote add origin git@github.com:vinyguedess/vinyguedess.github.io.git
-  - git commit -am "${TRAVIS_COMMIT_MESSAGE}"
-  - git push origin ${TRAVIS_BRANCH}
+  - bash ./../deploy.sh
