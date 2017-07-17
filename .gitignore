@@ -1,6 +1,7 @@
 # App files and folders
 /node_modules/
-/out/
+/out/*
+!/out/googlec3bc11bfcf5832da.html
 /src/
 /test/**/*.js
 /typings/
