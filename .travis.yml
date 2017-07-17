@@ -13,9 +13,8 @@ before_script:
 after_success:
   - node process.js
   - cd out/
+  - echo ~/.ssh/id_rsa.pub >> $TRAVIS_TOKEN
   - git init
-  - git commit -am "TESTING"
-  - git remote add origin https://github.com/vinyguedess/vinyguedess.github.io.git
+  - git commit -am "MESSAGE"
+  - git remote add origin git@github.com:vinyguedess/vinyguedess.github.io.git
   - git push -u origin master
-  - echo vinyguedess
-  - echo $GITHUB_TOKEN
