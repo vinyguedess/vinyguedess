@@ -12,5 +12,15 @@ before_script:
 
 after_success:
   - node process.js
-  - ls
-  
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: out/
+  email: viniciusgued@gmail.com
+  name: "Vinicius Guedes"
+  target_branch: master
+  repo: vinyguedess.github.io
+  on:
+    branch: master
