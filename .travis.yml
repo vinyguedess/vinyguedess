@@ -2,11 +2,6 @@ language: node_js
 node_js:
   - "6"
 
-env:
-  global:
-  - ENCRYPTION_LABEL: "<.... encryption label from previous step ....>"
-  - COMMIT_AUTHOR_EMAIL: "viniciusgued@gmail.com"
-
 install:
   - npm install -g typescript typings
   - typings install dt~node dt~mocha --global
@@ -14,3 +9,14 @@ install:
 
 before_script:
   - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: out/
+  email: viniciusgued@gmail.com
+  name: "Vinicius Guedes"
+  target_branch: master
+  on:
+    branch: master
