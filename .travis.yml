@@ -17,3 +17,5 @@ after_success:
   - git commit -am "TESTING"
   - git remote add origin https://github.com/vinyguedess/vinyguedess.github.io.git
   - git push -u origin master
+  - echo vinyguedess
+  - echo $GITHUB_TOKEN
