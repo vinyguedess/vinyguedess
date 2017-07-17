@@ -2,6 +2,7 @@
 /node_modules/
 /out/*
 !/out/googlec3bc11bfcf5832da.html
+!/out/sitemap.xml
 /src/
 /test/**/*.js
 /typings/
