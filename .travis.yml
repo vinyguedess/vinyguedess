@@ -10,6 +10,9 @@ install:
 before_script:
   - npm run build
 
+after_success:
+  - node process.js
+
 deploy:
   provider: pages
   skip_cleanup: true
