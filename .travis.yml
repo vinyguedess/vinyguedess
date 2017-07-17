@@ -13,4 +13,7 @@ before_script:
 after_success:
   - npm run process
   - cd build
-  - ls
+  - git init
+  - git remote add origin git@github.com:vinyguedess/vinyguedess.github.io.git
+  - git commit -am "${TRAVIS_COMMIT_MESSAGE}"
+  - git push origin ${TRAVIS_BRANCH}
