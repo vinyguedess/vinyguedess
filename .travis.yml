@@ -12,9 +12,13 @@ before_script:
 
 after_success:
   - node process.js
-  - cd out/
-  - echo ~/.ssh/id_rsa.pub >> $TRAVIS_TOKEN
-  - git init
-  - git commit -am "MESSAGE"
-  - git remote add origin git@github.com:vinyguedess/vinyguedess.github.io.git
-  - git push -u origin master
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local_dir: out/
+  repo: vinyguedess.github.io
+  target_branch: master
+  on:
+    branch: master
