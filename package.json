@@ -18,7 +18,6 @@
   "scripts": {
     "start": "node server.js",
     "build": "tsc",
-    "process": "node process.js",
     "test": "./node_modules/mocha/bin/_mocha test"
   }
 }

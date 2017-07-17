@@ -4,6 +4,20 @@ html
         //- Meta Tags
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="title", content=seo.title)
+        meta(name="description", content=seo.description)
+        meta(name="keywords", content=seo.getFormattedKeyWords())
+        meta(name="image", content=seo.image)
+
+        meta(property="og:type", content="website")
+        meta(property="og:title", content=seo.title)
+        meta(property="og:description", content=seo.description)
+        meta(property="og:image", content=seo.image)
+
+        meta(name="twitter:card", content="summary")
+        meta(name="twitter:title", content=seo.title)
+        meta(name="twitter:description", content=seo.description)
+        meta(name="twitter:image", content=seo.image)
 
         //- CSS Document
         <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
@@ -11,7 +25,7 @@ html
         <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
 
-        title Vinicius Guedes
+        title= seo.title
     
     body
 
@@ -32,7 +46,7 @@ html
             //- Intro
             section#intro.wrapper.style1.fullscreen.fade-up
                 .inner
-                    h1 Vinicius Guedes - Portifólio
+                    h1= seo.title
                     p Bem vindo ao meu Portifólio
 
                     ul.actions

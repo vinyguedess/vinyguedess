@@ -75,6 +75,20 @@ export class Service
         });
     }
 
+    public findByIndex(index:number):Promise<any>
+    {
+        return this.find()
+            .then((lista:Array<any>) => {
+                if (lista.length < 1)
+                    return null;
+
+                if (typeof lista[index - 1] === 'undefined')
+                    return null;
+
+                return lista[index - 1];
+            });
+    }
+
 }
 
 

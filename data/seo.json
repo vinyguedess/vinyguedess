@@ -1,0 +1,11 @@
+{
+    "name": "seo",
+    "data": [
+        {
+            "image": "http://graph.facebook.com/100000436900615/picture?width=300",
+            "title": "Vinicius Guedes - Portfólio",
+            "description": "Portfolio online com curriculo, trabalhos e habilidades desenvolvidas por Vinicius Guedes",
+            "keywords": ["full stack", "desenvolvedor", "web", "startup"]
+        }
+    ]
+}

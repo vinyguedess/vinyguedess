@@ -4,17 +4,19 @@ import { get } from 'request';
 import { app } from './src/app';
 
 
+const outDir = process.cwd() + '/out';
+
+
 const copiarAssets = () => {
-    let buildAssets = process.cwd() + '/build', 
-        dependencias = [
-        process.cwd() + '/resources/assets'
-    ]
+    let dependencias = [
+            process.cwd() + '/resources/assets'
+        ];
 
     return Promise.all(
         dependencias.map((dependencia:string):Promise<boolean> => {
             return new Promise(
                 (resolve:Function) => ncp(
-                    dependencia, buildAssets, (err:Error):void => err ? resolve(false) : resolve(true)
+                    dependencia, outDir, (err:Error):void => err ? resolve(false) : resolve(true)
                 )
             )
         })
@@ -41,7 +43,7 @@ const criarSinglePage = () => {
             .replace(/\(\//g, '(./');
 
         return new Promise((resolve:Function) => {
-            fs.writeFile(process.cwd() + '/build/index.html', data, (err:Error) => {
+            fs.writeFile(`${outDir}/index.html`, data, (err:Error) => {
                 if (err)
                     return resolve(false);
 
@@ -52,7 +54,7 @@ const criarSinglePage = () => {
 }
 
 
-fs.mkdir(process.cwd() + '/build', (err:Error):void => {
+fs.mkdir(outDir, (err:Error):void => {
     Promise.all([
         copiarAssets(),
         criarSinglePage()

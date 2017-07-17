@@ -14,8 +14,3 @@ install:
 
 before_script:
   - npm run build
-
-after_success:
-  - npm run process
-  - cd build
-  - bash ./../deploy.sh

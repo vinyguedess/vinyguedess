@@ -1,6 +1,6 @@
 # App files and folders
-/build/
 /node_modules/
+/out/
 /src/
 /test/**/*.js
 /typings/
