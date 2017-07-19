@@ -1,0 +1,22 @@
+{
+    "name": "projects",
+    "data": [
+        {
+            "name": "Blog - Autoridade Industrial",
+            "logo": "http://autoridade.solucoesindustriais.com.br/assets/imagens/logo.png",
+            "link": "http://autoridade.solucoesindustriais.com.br/",
+            "company": {
+                "name": "Soluções Indústriais",
+                "logo": "http://www.solucoesindustriais.com.br/portal/images/logo-solucoes-industriais.png",
+                "link": "http://solucoesindustriais.com.br"
+            },
+            "description": "Construção de blog abordando boas práticas de SEO e criação de ferramenta administrativa para gerenciamento do Blog e seus respectivos conteúdos",
+            "technologies": ["PHP", "Javascript"],
+            "frameworks": ["Laravel", "jQuery"],
+            "date": {
+                "start": "03/2016",
+                "end": "05/2016"
+            }
+        }
+    ]
+}

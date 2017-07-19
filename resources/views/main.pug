@@ -28,6 +28,12 @@ html
         link(rel="stylesheet", href="/css/main.css", type="text/css")
         <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+        style(type="text/css").
+
+            #projetos p { font-size: 20px; margin: 0; }
+            #projetos hr { margin: 10px 0; }
+            #projetos .tags { font-size: 15px; }
+            #projetos .project-logo img { background: #F4F4F4; border-radius: 50%; width: 1.5em; height: 1.5em; }
 
         title= seo.title
     
@@ -41,7 +47,9 @@ html
                         li
                             a(href="#intro") Bem vindo
                         li
-                            a(href="#experiencias") O que já fiz
+                            a(href="#projetos") Projetos e Freelas
+                        li
+                            a(href="#experiencias") Onde trabalhei
                         li
                             a(href="#contacts") Entre em contato
 
@@ -51,16 +59,57 @@ html
             section#intro.wrapper.style1.fullscreen.fade-up
                 .inner
                     h1= seo.title
-                    p Bem vindo ao meu Portifólio
+                    p(style="font-size: 20px;")
+                        | Engenheiro de software pós-graduado pela Universidade de 
+                        | São Paulo, em constante aprendizado e crescimento.
+
+                    h2 Conhecimentos
+                    .features
+                        each conhecimento in conhecimentos
+                            section
+                                span.icon.major(style="background-image: url(" + conhecimento.icon + "); background-size: 100% 100%; background-position: center center;")
+                                h3= conhecimento.name
+                                h5(title=conhecimento.grade)
+                                    each g in [1, 2, 3, 4, 5]
+                                        if conhecimento.grade >= g
+                                            i.fa.fa-star
+                                        else if conhecimento.grade < g && Math.ceil(conhecimento.grade) >= g
+                                            i.fa.fa-star-half-o
+                                        else
+                                            i.fa.fa-star-o
 
                     ul.actions
                         li
-                            a(href="#experiencias").button.scrolly Saiba mais
+                            a(href="#projetos").button.scrolly Saiba mais
 
-            //- O que já fiz
+            //- Projetos
+            section#projetos.wrapper.style2.fullscreen.fade-up
+                .inner
+                    h2 Projetos e Freelas
+
+                    .features
+                        each projeto in projetos
+                            section
+                                span.icon.major(style="background-image: url(" + projeto.logo + "); background-size: 100% 100%; background-position: center center;")
+                                h3= projeto.name
+                                h4
+                                    span.project-logo
+                                        img(src=projeto.company.logo)
+                                    | #{projeto.company.name}
+                                p= projeto.description
+                                hr
+                                .tags
+                                    div
+                                        strong Tecnologias: 
+                                        |  #{projeto.technologies.join(', ')}
+                                    div
+                                        strong Frameworks:
+                                        |  #{projeto.frameworks.join(', ')}
+                                    
+            //- Onde trabalhei
             section#experiencias.wrapper.style3.fade-up
                 .inner
-                    h2 O que já fiz
+                    h2 Onde trabalhei
 
                     .features
                         each exp in experiencias
