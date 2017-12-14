@@ -3,7 +3,6 @@
   "description": "VinyGuedess site processor for github.io",
   "version": "0.1.0",
   "main": "server.js",
-
   "dependencies": {
     "express": "^4.15.3",
     "ncp": "^2.0.0",
@@ -14,7 +13,6 @@
     "chai": "^4.1.0",
     "mocha": "^3.4.2"
   },
-
   "scripts": {
     "start": "node server.js",
     "build": "tsc",

@@ -4,10 +4,10 @@
         {
             "name": "Blog - Autoridade Industrial",
             "logo": "http://autoridade.solucoesindustriais.com.br/assets/imagens/logo.png",
-            "link": "http://autoridade.solucoesindustriais.com.br/",
+            "link": "http://autoridade.solucoesindustriais.com.br",
             "company": {
                 "name": "Soluções Indústriais",
-                "logo": "http://www.solucoesindustriais.com.br/portal/images/logo-solucoes-industriais.png",
+                "logo": "http://www.solucoesindustriais.com.br/shark-soluc/assets/images/logo.png",
                 "link": "http://solucoesindustriais.com.br"
             },
             "description": "Construção de blog abordando boas práticas de SEO e criação de ferramenta administrativa para gerenciamento do Blog e seus respectivos conteúdos",
@@ -16,6 +16,40 @@
             "date": {
                 "start": "03/2016",
                 "end": "05/2016"
+            }
+        },
+        {
+            "name": "Raspador de posicionamento no Google",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
+            "link": "http://serper.herokuapp.com",
+            "company": {
+                "name": "Go Up Digital",
+                "logo": "http://goupdigital.com.br/img/logo.png",
+                "link": "http://goupdigital.com.br"
+            },
+            "description": "Uma API que ao ser requisitada informa o posicionamento de um dominio no Google na pesquisa da palavra chave informada.",
+            "technologies": ["PHP"],
+            "frameworks": ["Silex"],
+            "date": {
+                "start": "11/2017",
+                "end": "11/2017"
+            }
+        },
+        {
+            "name": "BI - Forest",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
+            "link": null,
+            "company": {
+                "name": "Orfeus",
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
+                "link": "http://orfeus.com.br"
+            },
+            "description": "Construção de BI junto a equipe de desenvolvimento da Orfeus. O projeto continua em desenvolvimento.",
+            "technologies": ["PHP", "Javascript", "MySQL"],
+            "frameworks": ["Laravel", "Vue.js"],
+            "date": {
+                "start": "09/2017",
+                "end": "12/2017"
             }
         }
     ]
