@@ -93,11 +93,18 @@ html
                         each projeto in projetos
                             section
                                 span.icon.major(style="background-image: url(" + projeto.logo + "); background-size: 100% 100%; background-position: center center;")
-                                h3= projeto.name
+                                h3
+                                    if projeto.link !== null
+                                        a(href=`${projeto.link}` target="_blank")= projeto.name
+                                    else
+                                        | #{projeto.name}
                                 h4
                                     span.project-logo
                                         img(src=projeto.company.logo)
-                                    | #{projeto.company.name}
+                                    if projeto.company.link !== null
+                                        a(href=`${projeto.company.link}` target="_blank")= projeto.company.name
+                                    else
+                                        |  #{projeto.company.name}
                                 p= projeto.description
                                 hr
                                 .tags

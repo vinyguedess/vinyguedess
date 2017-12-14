@@ -3,8 +3,7 @@ node_js:
   - "6"
 
 install:
-  - npm install -g typescript typings
-  - typings install dt~node dt~mocha --global
+  - npm install -g typescript
   - npm install
 
 before_script:
