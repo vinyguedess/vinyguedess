@@ -6,7 +6,7 @@
   "dependencies": {
     "express": "^4.15.3",
     "ncp": "^2.0.0",
-    "pug": "^2.0.0-rc.2",
+    "pug": "^3.0.1",
     "request": "^2.81.0"
   },
   "devDependencies": {
